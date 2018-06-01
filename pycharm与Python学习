@@ -21,3 +21,7 @@ map()函数：接受两个参数，一个是函数，一个是序列，map将传
 
 reduce（）函数：接受两个参数，把结果继续和序列的下个元素做累计计算
 
+
+pycharm
+安装包下载地址：pycharm官网：https://www.jetbrains.com/pycharm/download/#section=windows，下载免费的community版本即可
+运行Python过程：https://jingyan.baidu.com/article/0964eca267fabb8284f53679.html，注意与idea
