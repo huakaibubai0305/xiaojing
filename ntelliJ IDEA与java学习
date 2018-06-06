@@ -103,9 +103,11 @@ public class InitailTelphone {
 
 四、构造方法：
 1.使用new+构造方法 创建一个新的对象
+Telphone phone = new Telphone();
 2.构造方法是定义在java类中的一个用来初始化对象的方法
 构造方法与类同名且没有返回值
- 
+而普通方法是干什么
+
 构造方法的语句格式：
 public 构造方法名（）{
     //初始化代码
