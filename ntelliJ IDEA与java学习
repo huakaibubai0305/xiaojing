@@ -3,7 +3,7 @@ ntelliJ IDEA运行你的第一个java程序：https://blog.csdn.net/nextljp/arti
 
 java关键字区分大小写，java结尾的封号为英文版封号
 
-Java变量的类型：
+一：Java变量的类型：
 基本数据类型（基本数据类型变量存的是数据本身）和引用类型变量（存的是保存数据的空间地址）
 String name="爱慕课"; 姓名为多个字符，可以使用 String 类型
 char sex='男'; 性别为单个字符，可以使用 char 类型
@@ -23,7 +23,7 @@ int b = a++;可以认为第一种是先将a=5这个值赋值给b，然后在做a
 int b = ++a;先做完a的自增运算在将自增完成的结果值6赋值给b。所以输出a为6，b为6
 b=--a是a先自减然后赋给b；b=a--是a先赋值给b，然后自减；比如int a=24;int b=--a;那么a=23,b=23;int a=24;int b=a--;那么a=23,b=24;
 
-if语句格式：嵌套语句
+二：if语句格式：嵌套语句
 public class tes07 {
     public static void main(String[] args) {
         int score = 94;
@@ -41,7 +41,7 @@ public class tes07 {
     
    if 后小括号里必须是一个条件表达式，结果为布尔值，如果为 true ，则执行后面大括号中的代码，如果为 false ，则不执行
     
-   switch语句：
+   三：switch语句：
    执行过程：当 switch 后表达式的值和 case 语句后的值相同时，从该位置开始向下执行，直到遇到 break 语句或者 switch 语句块结束；
    如果没有匹配的 case 语句则执行 default 块的代码。
    public static void main(String[] args) {
@@ -61,7 +61,7 @@ public class tes07 {
                 System.out.println("吃主席套餐");
                 break;
 
-Java循环语句:while 、 do...while 、 for
+四：Java循环语句:while 、 do...while 、 for
 while 先判断，后执行
 while（判断语句）{
     循环操作
@@ -163,7 +163,7 @@ Telphone phone = new Telphone();
 构造方法的语句格式：
 public 构造方法名（）{
     //初始化代码
-} 注意：构造方法名与类名相同 （）内可以指定参数，也可以不指定
+} 注意：构造方法名与类名相同 （）内可以指定参数，也可以不指定，无参数构造方法，有参数的构造方法是为了初始化对象的值
 
-
+IDEA中快速添加main、System方法：https://blog.csdn.net/wangpengzhi19891223/article/details/78950047/
 
