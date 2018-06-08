@@ -92,7 +92,14 @@ public class HelloWorld {
 		System.out.println("1到100之间不能被3整除的数之和为：" + sum);
 	}
 }
-
+ 
+ 使用break语句退出指定的循环
+ continue语句是跳出循环体中剩余的语句执行下一次循环
+ 
+ Java 循环语句之多重循环
+ 循环体中包含循环语句的结构称为多重循环。三种循环语句可以自身嵌套，也可以相互嵌套，最常见的就是二重循环。
+ 在二重循环中，外层循环每执行一次，内层循环要执行一圈。
+ 
 
 类和对象：
 类是模子，确定对象将会拥有的特征（属性）和行为，特点：类是对象的类型（这是重点，记住），具有相同属性和方法的一组对象的集合
@@ -133,7 +140,7 @@ public class InitailTelphone {
     public static void main(String[]args){
         Telphone phone = new Telphone();
         phone.sendMessage();
-        //给砬变量赋值
+        //给实例变量赋值
         phone.screen=5f;
         phone.cpu=1.4f;
         phone.mem=2.0f;
@@ -166,4 +173,79 @@ public 构造方法名（）{
 } 注意：构造方法名与类名相同 （）内可以指定参数，也可以不指定，无参数构造方法，有参数的构造方法是为了初始化对象的值
 
 IDEA中快速添加main、System方法：https://blog.csdn.net/wangpengzhi19891223/article/details/78950047/
+public class Telphone {
+    float screen;
+    float cpu;
+    float mem;
+    public Telphone(){
+        System.out.println("无参数的构造方法执行了");
+    }
+    public Telphone(float newscreen,float newcpu,float newmem){
+        screen=newscreen;
+        cpu=newcpu;
+        mem=newmem;
+        System.out.println("有参数的构造方法执行了");
+    }
+}
+
+public class InitailTelphone {
+    public static void main(String[] args){
+        //通过无参数的构造方法创建对象
+        Telphone phone1=new Telphone();
+        //通过有参数的构造方法创建对象并给实例对象变量赋值
+        Telphone phone2=new Telphone(5.0f,1.4f,2.0f);
+     }
+}
+
+注意：1.当没有指定构造方法时，系统会自动添加去参数的构造方法
+2.当没有指定构造方法，无论是有参数还是无参数的构造方法，都不会自动添加无参数的构造方法
+3.构造方法重载：方法名相同，但参数不同的多个方法，调用时会自动根据不同的参数选择相应的方法
+4.构造方法不但可以给对象的属性赋值，话可以保证给对象的属性赋予一个合理的值
+public class Telphone {
+    float screen;
+    float cpu;
+    float mem;
+    public Telphone(float newscreen,float newcpu,float newmem){
+        if (newscreen<3.5f){
+            System.out.print("你输入的参数是有误的自动赋值3.5f");
+            screen=3.5f;
+        }else {
+            screen = newscreen;
+        }
+        cpu=newcpu;
+        mem=newmem;
+        System.out.println("有参数的构造方法执行了");
+    }
+}
+
+Java 中的 static 使用之静态变量
+大家都知道，我们可以基于一个类创建多个该类的对象，每个对象都拥有自己的成员，互相独立
+。然而在某些时候，我们更希望该类所有的对象共享同一个成员。此时就是 static 大显身手的时候了！！
+Java 中被 static 修饰的成员称为静态成员或类成员。它属于整个类所有，而不是某个对象所有，即被类的所有对象所共享。
+重点：静态成员可以使用类名直接访问，也可以使用对象名进行访问。当然，鉴于他作用的特殊性更推荐用类名访问~~
+使用 static 可以修饰变量、方法和代码块。
+要注意哦：静态成员属于整个类，当系统第一次使用该类时，就会为其分配内存空间直到该类被卸载才会进行资源回收！~~
+public class HelloWorld {
+    // 定义静态变量，保存班级名称
+	   static String className = "JAVA开发一班";
+	public static void main(String[] args) {
+		//直接使用类名访问静态变量，输出班级名称
+		System.out.println(HelloWorld.className);
+		//创建类的对象
+		HelloWold word=new HelloWold();
+		//使用对象名访问静态变量
+		System.out.println(world.className);
+		//使用对象名的形式修改静态变量的值
+		world.className="java二班";
+		//再次使用类名访问静态变量，值已经被修改
+		System.out.println(HelloWorld.className);
+	}
+}
+
+Java 中的 static 使用之静态方法
+与静态变量一样，我们也可以使用 static 修饰方法，称为静态方法或类方法。
+其实之前我们一直写的 main 方法就是静态方法。推荐使用类名称调用静态方法
+
+注意：1.静态方法中可以直接调用同类中的静态成员，但不能直接调用非静态成员
+如果希望在静态方法中调用非静态变量，可以通过创建类的对象，然后通过对象来访问非静态变量
 
