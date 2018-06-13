@@ -101,7 +101,42 @@ public class HelloWorld {
  Java 循环语句之多重循环
  循环体中包含循环语句的结构称为多重循环。三种循环语句可以自身嵌套，也可以相互嵌套，最常见的就是二重循环。
  在二重循环中，外层循环每执行一次，内层循环要执行一圈。
- 
+ import java.util.Scanner;
+
+java让用户自己输入数据，先导入Scanner包，idea中可以先Scanner input=new Scanner(System.in);创建对象语句，写完后Scanner字样为红色，
+会有提示,同时点击alt+enter自动导入Scanner包，注意这里的自动导入是因为前面已经设定过了，在顶端会出现import  java.util.Scanenr;语句
+/**
+ * Created by wxj on 2018/6/13.
+ */
+/*功能实现接收三个班级的各四名学员的成绩信息，然后计算每个班级学员的平均分
+知识点 二重循环、外层循环控制班级数量，内层循环控制每个班级记的学员数量
+ */
+public class test03 {
+    public static void main(String[] args){
+        int classNum=3;//班级数量
+        int stuNum=4;//学生的数量
+        double sum=0;//成绩总和
+        double avg=0;//成绩平均分
+        Scanner input=new Scanner(System.in);
+        for (int i=1;i<=classNum;i++){//外层循环控制班级的数量
+            sum=0;//成绩归0
+            System.out.println("请输入第"+i+"各班级的成绩");
+            for (int j=1;j<=stuNum;j++){
+                System.out.println("请输入第"+j+"个学员的成绩");
+                int score=input.nextInt();//获取输入的成绩
+                sum=sum+score;
+            }
+            avg=sum/stuNum;//计算平均分
+            System.out.println("第"+i+"各班级学生的平均分为："+avg);
+        }
+     }
+}
+/*经验总结：
+1通过分析，明确需求
+2.整理相关知识点
+3 梳理实现流程
+4 借助“断点跟踪"解决问题
+ */
 
 类和对象：
 类是模子，确定对象将会拥有的特征（属性）和行为，特点：类是对象的类型（这是重点，记住），具有相同属性和方法的一组对象的集合
