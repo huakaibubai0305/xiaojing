@@ -1,3 +1,11 @@
+多层感知机：
+资料：DeepLearning学习（1）--多层感知机 网址：https://www.cnblogs.com/muzi-banana/p/6145873.html
+多层感知机(MLP)算法简介及Spark MLlib调用(Scala/Java/Python)，网址：https://zhuanlan.zhihu.com/p/24110843
+神经协同过滤：网址https://www.cnblogs.com/HolyShine/p/6728999.html
+
+
+
+
 Word2vec
 1.定义：把自然语言转换成数值形式，嵌入到一个数学空间里，这种嵌入方式就叫词嵌入，而Word2vec是词嵌入的一种
 
