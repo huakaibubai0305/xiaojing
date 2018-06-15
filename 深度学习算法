@@ -1,3 +1,6 @@
+https://blog.csdn.net/w5688414/article/details/78651363英文论文翻译的总博客
+
+
 多层感知机：
 资料：DeepLearning学习（1）--多层感知机 网址：https://www.cnblogs.com/muzi-banana/p/6145873.html
 多层感知机(MLP)算法简介及Spark MLlib调用(Scala/Java/Python)，网址：https://zhuanlan.zhihu.com/p/24110843
@@ -18,3 +21,27 @@ Word2vec
 *而如果是拿一个词语的上下文作为输入，来预测这个词语本身，则是 『CBOW 模型』
 
 3.1 Skip-gram 和 CBOW 的简单情形
+
+卷积神经网络https://www.cnblogs.com/skyfsm/p/6790245.html结合https://blog.csdn.net/ice_actor/article/details/78648780
+卷积神经网络的层次结构：
+   • 数据输入层/ Input layer
+　　• 卷积计算层/ CONV layer
+　　• ReLU激励层 / ReLU layer
+　　• 池化层 / Pooling layer
+　　• 全连接层 / FC layer
+
+数据输入层：原始图像数据进行预处理包括：
+去均值：把输入数据各个维度都中心化为0，把样本的中心拉回到坐标系原点上。
+归一化：幅度归一化到同样的范围
+PCA白化：用PCA降维；白化是对数据各个特征轴上的幅度归一化
+
+卷积计算层
+两个关键的操作：
+局部关联。每个神经元看做一个滤波器（filter）
+窗口(receptive field滑动,filter对局部数据计算
+
+先介绍卷积层遇到的几个名词：
+　　• 深度/depth（解释见下图）
+　　• 步长/stride （窗口一次滑动的长度）
+　　• 填充值/zero-padding
+
